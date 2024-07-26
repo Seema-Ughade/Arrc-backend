@@ -68,9 +68,6 @@ app.post('/api/v1/users', upload.single('photo'), async (req, res) => {
 });
 
 
-
-
-
 // Route to handle GET requests for fetching all users
 app.get('/api/v1/users', async (req, res) => {
     try {
