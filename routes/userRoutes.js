@@ -22,11 +22,11 @@ router.get('/users', userController.getAllUsers);
 
 
 // Update All Users
-router.put('/users', userController.updateAllUsers);
+router.put('/users', auth, userController.updateAllUsers);
 
 
 // Delete All Users
-router.delete('/users', userController.deleteAllUsers);
+router.delete('/users', auth, userController.deleteAllUsers);
 
 
 //Public Routes
