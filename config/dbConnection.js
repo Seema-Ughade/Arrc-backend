@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 function dbConnect(){
     try{
-            mongoose.connect(process.env.DB_URL)
+            mongoose.connect(process.env.MONGODB_URI)
             .then(()=>{
                 console.log('Great connected with DB 😊')
             })
