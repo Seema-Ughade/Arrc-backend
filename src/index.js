@@ -3,6 +3,8 @@ const { dbConnect } = require('../config/dbConnection');
 const router = require('../routes/userRoutes');
 const internshipRoutes = require('../routes/internshipRoutes');
 const contactRoutes = require('../routes/contactRoutes');
+const courseRoutes = require('../routes/contactRoutes');
+
 
 
 
@@ -26,6 +28,8 @@ app.use(express.json());
 app.use('/api/v1', router);
 app.use('/api/v1/internships', internshipRoutes);
 app.use('/api/v1/', contactRoutes);
+app.use('/api/v1/courses', courseRoutes);
+
 
 
 app.listen(port, hostname, () => {
