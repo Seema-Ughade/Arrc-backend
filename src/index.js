@@ -3,7 +3,7 @@ const { dbConnect } = require('../config/dbConnection');
 const router = require('../routes/userRoutes');
 const internshipRoutes = require('../routes/internshipRoutes');
 const contactRoutes = require('../routes/contactRoutes');
-const courseRoutes = require('../routes/contactRoutes');
+const courseRoutes = require('../routes/courseRoutes');
 
 
 

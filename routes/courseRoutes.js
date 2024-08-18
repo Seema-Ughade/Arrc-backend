@@ -1,4 +1,3 @@
-// routes/courseRoutes.js
 const express = require('express');
 const router = express.Router();
 const { saveCourseApplication, getCourseApplications } = require('../controllers/courseController');
@@ -7,6 +6,6 @@ const { saveCourseApplication, getCourseApplications } = require('../controllers
 router.post('/courseApplications', saveCourseApplication);
 
 // Route to get all course applications
-router.get('/', getCourseApplications);
+router.get('/courseApplications', getCourseApplications); // Ensure the endpoint is correct
 
 module.exports = router;

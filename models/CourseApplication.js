@@ -1,4 +1,3 @@
-// models/courseApplicationModel.js
 const mongoose = require('mongoose');
 
 const courseApplicationSchema = new mongoose.Schema({
@@ -11,6 +10,4 @@ const courseApplicationSchema = new mongoose.Schema({
   date: { type: Date, required: true }
 }, { timestamps: true });
 
-const CourseApplication = mongoose.model('CourseApplication', courseApplicationSchema);
-
-module.exports = CourseApplication;
+module.exports = mongoose.model('CourseApplication', courseApplicationSchema);

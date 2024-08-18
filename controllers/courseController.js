@@ -1,5 +1,4 @@
-// controllers/courseController.js
-const CourseApplication = require('../models/courseApplicationModel');
+const CourseApplication = require('../models/CourseApplication');
 
 // Save course application
 const saveCourseApplication = async (req, res) => {
