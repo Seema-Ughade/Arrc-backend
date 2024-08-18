@@ -25,7 +25,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/v1', router);
 app.use('/api/v1/internships', internshipRoutes);
-app.use('/api/v1/contact', contactRoutes); // Changed to match route in contactRoutes
+app.use('/api/v1/', contactRoutes);
 
 
 app.listen(port, hostname, () => {
