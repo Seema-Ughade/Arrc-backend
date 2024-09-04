@@ -1,4 +1,4 @@
-const CourseApplication = require('../models/CourseApplication');
+// const CourseApplication = require('../models/CourseApplication');
 
 // Save course application
 const saveCourseApplication = async (req, res) => {
