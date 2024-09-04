@@ -21,7 +21,22 @@ const getCourseApplications = async (req, res) => {
   }
 };
 
+// Delete a course application by ID
+const deleteCourseApplication = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const application = await CourseApplication.findByIdAndDelete(id);
+    if (!application) {
+      return res.status(404).json({ message: 'Application not found.' });
+    }
+    res.status(200).json({ message: 'Application deleted successfully.' });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to delete application.', error });
+  }
+};
+
 module.exports = {
   saveCourseApplication,
-  getCourseApplications
+  getCourseApplications,
+  deleteCourseApplication,
 };

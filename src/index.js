@@ -5,9 +5,6 @@ const internshipRoutes = require('../routes/internshipRoutes');
 const contactRoutes = require('../routes/contactRoutes');
 const courseRoutes = require('../routes/courseRoutes');
 
-
-
-
 const dotenv = require('dotenv');
 const cors = require('cors');
 
