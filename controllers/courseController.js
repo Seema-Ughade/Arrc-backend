@@ -35,8 +35,26 @@ const deleteCourseApplication = async (req, res) => {
   }
 };
 
+const updateCourseApplication = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedData = req.body;
+    const application = await CourseApplication.findByIdAndUpdate(id, updatedData, { new: true, runValidators: true });
+
+    if (!application) {
+      return res.status(404).json({ message: 'Application not found.' });
+    }
+
+    res.status(200).json(application);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to update application.', error });
+  }
+};
+
+
 module.exports = {
   saveCourseApplication,
   getCourseApplications,
   deleteCourseApplication,
+  updateCourseApplication,
 };

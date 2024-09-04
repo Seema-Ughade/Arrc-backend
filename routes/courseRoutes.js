@@ -3,7 +3,8 @@ const router = express.Router();
 const { 
   saveCourseApplication, 
   getCourseApplications, 
-  deleteCourseApplication // Add deleteCourseApplication
+  deleteCourseApplication, // Add deleteCourseApplication
+  updateCourseApplication
 } = require('../controllers/courseController');
 
 // Route to submit course application
@@ -14,5 +15,8 @@ router.get('/courseApplications', getCourseApplications);
 
 // Route to delete a course application by ID
 router.delete('/courseApplications/:id', deleteCourseApplication); // Add delete route
+
+
+router.put('/courseApplications/:id', updateCourseApplication); // Add edit route
 
 module.exports = router;
