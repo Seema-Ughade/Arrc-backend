@@ -9,6 +9,7 @@
 // router.get('/courseApplications', getCourseApplications); // Ensure the endpoint is correct
 
 // module.exports = router;
+
 const express = require('express');
 const router = express.Router();
 const { 
