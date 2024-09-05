@@ -1,4 +1,4 @@
-const CourseApplication = require('../models/CourseApplication');
+// const CourseApplication = require('../models/CourseApplication');
 
 // Save course application
 const saveCourseApplication = async (req, res) => {
@@ -35,7 +35,6 @@ const deleteCourseApplication = async (req, res) => {
   }
 };
 
-// Update a course application by ID
 const updateCourseApplication = async (req, res) => {
   try {
     const { id } = req.params;
@@ -52,9 +51,10 @@ const updateCourseApplication = async (req, res) => {
   }
 };
 
+
 module.exports = {
   saveCourseApplication,
   getCourseApplications,
   deleteCourseApplication,
-  updateCourseApplication
+  updateCourseApplication,
 };
